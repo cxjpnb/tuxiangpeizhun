@@ -1,0 +1,18 @@
+读取图像代码：
+Inimg = imread('tu1.jpg'); 
+Baseimg= imread('tu2.jpg'); 
+figure; 
+subplot(1,2,1),imshow(Inimg); 
+subplot(1,2,2),imshow(Baseimg);
+
+
+命令行输入：
+cpselect(Baseimg,Inimg);
+
+
+
+tform=cp2tform(fixedPoints1,movingPoints1,’affine’); 
+Iout=imtransform(Inimg,tform); 
+figure 
+subplot(1,2,1),imshow(Iout); 
+subplot(1,2,2),imshow(Baseimg);
